@@ -86,7 +86,7 @@ namespace RhysG.MSBuild.Azure
             {
                 FileInfo file = new FileInfo(fileItem.ItemSpec);
 
-                string folder = string.IsNullOrEmpty(DestinationFolder) ? "" : DestinationFolder;
+                string folder = string.IsNullOrEmpty(DestinationFolder) ? "" : DestinationFolder + @"\";
                 CloudBlob blob = container.GetBlobReference(folder + file.Name);
 
                 try
